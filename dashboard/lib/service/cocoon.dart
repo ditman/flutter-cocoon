@@ -22,9 +22,9 @@ abstract class CocoonService {
   /// service. Defaults to production data on a release build, and fake data on
   /// a debug build.
   factory CocoonService({bool useProductionService = kReleaseMode}) {
-    if (useProductionService) {
-      return AppEngineCocoonService();
-    }
+    // if (useProductionService) {
+    //   return AppEngineCocoonService();
+    // }
     return DevelopmentCocoonService(DateTime.now(), simulateLoadingDelays: true);
   }
 
